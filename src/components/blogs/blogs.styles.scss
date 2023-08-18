@@ -1,0 +1,181 @@
+.main__container__blogs {
+  position: relative;
+  .main--top-blog-bg {
+    position: absolute;
+    width: 50%;
+    height: 25rem;
+
+    // background-color: rgb(255, 98, 41);
+    // border: 12px solid rgb(255, 98, 41);
+
+    // left: 20rem;
+  }
+  width: 100%;
+  min-height: auto;
+  height: auto;
+  padding: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(0, 0, 0, 0.851);
+  display: flex;
+  flex-direction: column;
+
+  &--head {
+    text-transform: capitalize;
+    margin-left: 2.5rem;
+  }
+  &--box {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    position: relative;
+    .new {
+      position: absolute;
+      left: 88%;
+      clip-path: polygon(0 0, 100% 100%, 100% 0);
+      background-color: rgb(255, 98, 41);
+
+      width: 10rem;
+      height: 10rem;
+      text-align: center;
+
+      .new--blog {
+        display: block;
+        margin-top: 1rem;
+        margin-left: 2.5rem;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #fff;
+      }
+    }
+    &-left {
+      width: 60%;
+      height: 100%;
+      padding: 1.25rem;
+      display: flex;
+      justify-content: center;
+      padding: 2.5rem;
+      align-items: center;
+      &--image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-right {
+      width: 40%;
+      height: auto;
+      padding: 1.5rem;
+      color: #fff;
+      &--head {
+        &--main {
+          margin-top: 0.5rem;
+          font-weight: 500;
+          font-size: 1rem;
+          color: rgba(0, 0, 0, 0.734);
+          color: #ffffff8f;
+        }
+      }
+    }
+  }
+}
+.more-blogs {
+  margin-top: 5.5rem;
+  margin-left: 2.5rem;
+  color: #ddd;
+}
+.sub-main__container__blogs--prev {
+  //   min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(2, 20rem);
+  padding: 1.25rem;
+  z-index: 0;
+
+  & > * {
+    // margin: 2.5rem;
+  }
+  &--1 {
+    max-height: 100%;
+    max-width: 100%;
+    background-image: url("https://a-static.besthdwallpaper.com/building-exterior-architectural-design-wallpaper-3200x2400-78442_29.jpg");
+    background-size: cover;
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    transition: 0.2s all;
+    box-shadow: 0 0.25rem 0.2rem rgb(0, 0, 0, 0.4);
+
+    &:hover {
+      transform: scale(0.99);
+    }
+
+    &--content {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      padding: 1rem;
+      background-color: #ffffffa6;
+    }
+    // grid-column: 1;
+    // grid-row: 1/-1;
+  }
+  &--2 {
+    max-height: 100%;
+    max-width: 100%;
+    background: #a32929;
+    grid-row: span 4;
+    margin: 1rem;
+    background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/2881.jpg");
+    background-size: cover;
+    transition: 0.2s all;
+    box-shadow: 0 0.25rem 0.2rem rgb(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    position: relative;
+    &--content {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      padding: 1rem;
+      background-color: #ffffffa6;
+    }
+
+    &:hover {
+      transform: scale(0.99);
+    }
+  }
+
+  &--3 {
+    max-height: 100%;
+    max-width: 100%;
+    background: #a32929;
+    grid-row: span 4;
+    margin: 1rem;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/222/27/725/architecture-building-china-clouds-wallpaper-preview.jpg");
+
+    background-size: cover;
+    transition: 0.2s all;
+    box-shadow: 0 0.25rem 0.2rem rgb(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    position: relative;
+
+    &--content {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      padding: 1rem;
+      background-color: #ffffffa6;
+      border: 1px solid #000;
+    }
+
+    &:hover {
+      transform: scale(0.99);
+    }
+  }
+}

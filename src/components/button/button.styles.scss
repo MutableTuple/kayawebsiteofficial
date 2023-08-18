@@ -1,0 +1,11 @@
+.main-button {
+  width: fit-content;
+  padding: 1rem 3rem;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+  &:hover {
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+  }
+}

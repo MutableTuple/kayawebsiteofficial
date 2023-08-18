@@ -1,0 +1,331 @@
+.about_us__main__container {
+  width: 100%;
+  height: auto;
+  font-family: "Kanit", sans-serif;
+  &--head {
+    margin-top: 2.5rem;
+  }
+
+  &--box--head--sub {
+    padding: 2.5rem;
+    text-transform: capitalize;
+
+    &--div--in {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      padding: 2rem 0;
+      &--left {
+        width: 50%;
+        height: 100%;
+
+        .story--p-1 {
+          padding: 2rem;
+          font-weight: 500;
+          font-family: "Poppins", sans-serif;
+          letter-spacing: 0.15rem;
+        }
+
+        .s-img-2 {
+          padding: 1.5rem;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &--right {
+        width: 50%;
+        height: 100%;
+        padding: 1.5rem;
+        .s-img-1 {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &--box {
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/7035.jpg");
+    background-size: cover;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    // animation: ab_anim 0.5s infinite;
+  }
+}
+.main__sub__container {
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(0, 18, 40),
+    rgba(0, 0, 0, 0.804)
+  );
+  &--values {
+    margin-top: 4.5rem;
+    &--head {
+      margin-left: 2.5rem;
+    }
+    &--vision--1 {
+      width: 100%;
+      background-size: cover;
+      .vision--1 {
+        margin-top: 2.5rem;
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: space-between;
+
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(0, 18, 40),
+          rgba(0, 0, 0, 0.804)
+        );
+        &--text {
+          width: 40%;
+          font-family: "Montserrat", sans-serif;
+          text-transform: capitalize;
+          font-weight: 400;
+          font-size: 1.25rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0.5rem;
+          color: #fff;
+          .ov {
+            font-size: 2.5rem;
+          }
+        }
+        &--img {
+          width: 50%;
+          height: 100%;
+          background-color: #ffffff95;
+          // clip-path: polygon(100% 0, 100% 100%, 28% 100%, 0 0);
+          background-image: url("https://images.pexels.com/photos/7688159/pexels-photo-7688159.jpeg?auto=compress&cs=tinysgb&w=1260&h=750&dpr=1");
+          background-size: cover;
+        }
+      }
+    }
+    &--vision--2 {
+      .vision--2 {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(0, 18, 40),
+          rgba(0, 0, 0, 0.804)
+        );
+        &--text {
+          width: 40%;
+          font-family: "Montserrat", sans-serif;
+          text-transform: capitalize;
+          font-weight: 400;
+          font-size: 1.25rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0.5rem;
+          color: #fff;
+          order: 2;
+          margin-left: 2.5rem;
+          .ov {
+            font-size: 2.5rem;
+          }
+        }
+        &--img {
+          width: 50%;
+          height: 100%;
+          background-color: #ffffff95;
+          // clip-path: polygon(94% 0, 66% 100%, 0 100%, 0 0);
+          background-image: url("https://images.pexels.com/photos/1181360/pexels-photo-1181360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+          background-size: cover;
+        }
+      }
+    }
+    .vision {
+    }
+    .comp__val {
+      margin-top: auto;
+      width: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgba(15, 15, 15, 0.888),
+        rgba(0, 0, 0, 0.771)
+      );
+      height: 5rem;
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  transform: skewY(-2deg);
+  & > * {
+    transform: skewY(2deg);
+  }
+
+  &--head {
+    color: white;
+  }
+  &--box {
+    &--team-leaders {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 2rem;
+      &--1 {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        box-shadow: 0rem 0.25rem 0.25rem 0.025rem rgba(0, 0, 0, 0.5);
+
+        height: 25rem;
+        &--img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        &--ack {
+          position: absolute;
+          padding: 0.2rem;
+          top: 80%;
+          text-align: center;
+
+          &--t1 {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #ffb183;
+            &--sub {
+              text-transform: capitalize;
+            }
+          }
+          width: 100%;
+          height: 20%;
+          color: #fff;
+          background-color: rgb(0, 0, 0, 0.5);
+        }
+      }
+      &--2 {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0rem 0.25rem 0.25rem 0.025rem rgba(0, 0, 0, 0.5);
+        position: relative;
+        height: 25rem;
+        &--img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        &--ack {
+          position: absolute;
+          padding: 0.2rem;
+          top: 80%;
+          text-align: center;
+
+          &--t1 {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #ffb183;
+            &--sub {
+              text-transform: capitalize;
+            }
+          }
+          width: 100%;
+          height: 20%;
+          color: #fff;
+          background-color: rgb(0, 0, 0, 0.5);
+        }
+      }
+      &--3 {
+        height: 25rem;
+        position: relative;
+        &--img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        &--ack {
+          position: absolute;
+          padding: 0.2rem;
+          top: 80%;
+          text-align: center;
+
+          &--t1 {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #ffb183;
+            &--sub {
+              text-transform: capitalize;
+            }
+          }
+          width: 100%;
+          height: 20%;
+          color: #fff;
+          background-color: rgb(0, 0, 0, 0.5);
+        }
+      }
+      &--4 {
+        display: flex;
+        flex-direction: column;
+
+        height: 25rem;
+        position: relative;
+        &--img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        &--ack {
+          position: absolute;
+          padding: 0.2rem;
+          top: 80%;
+          text-align: center;
+
+          &--t1 {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #ffb183;
+            &--sub {
+              text-transform: capitalize;
+            }
+          }
+          width: 100%;
+          height: 20%;
+          color: #fff;
+          background-color: rgb(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+}
+// Animtions
+
+@keyframes ab_anim {
+  0% {
+    filter: blur(1);
+  }
+  50% {
+    filter: blur(0.5);
+  }
+  0% {
+    filter: blur(0);
+  }
+}
