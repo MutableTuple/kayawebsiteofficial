@@ -13,6 +13,20 @@ a:visited {
 
 .main__container {
   font-family: "Kanit" sans-serif;
+  // position: relative;
+  .loader {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    // z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main--loader--spinner {
+      animation: loader 0.5s infinite;
+    }
+  }
 
   width: 100%;
   &-landing {
@@ -472,5 +486,15 @@ a:visited {
         }
       }
     }
+  }
+}
+
+// Animation
+@keyframes loader {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
   }
 }

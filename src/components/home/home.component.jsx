@@ -9,6 +9,9 @@ import Button from "../button/button.component";
 const Home = () => {
   return (
     <div className="main__container">
+      {/* <div className="loader">
+        <div className="main--loader--spinner">________________</div>
+      </div> */}
       <div className="main__container-landing">
         <div className="main__container-landing--content">
           <div className="main__container-landing--content--left">

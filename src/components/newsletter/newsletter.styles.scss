@@ -1,0 +1,117 @@
+.main__projects__container {
+  height: auto;
+  width: 100%;
+
+  &__box {
+    width: 100%;
+    height: 95vh;
+    filter: grayscale(100%);
+
+    background-image: linear-gradient(
+        to bottom left,
+        rgba(255, 255, 255, 0.029) 65%,
+        rgba(0, 0, 0, 0.363) 50%
+      ),
+      url("https://www.pixelstalk.net/wp-content/uploads/images6/New-York-Wallpaper-4K-HD-Free-download.jpg");
+    // background-position: 80% 20%;
+    background-size: cover;
+    // clip-path: polygon(100% 0, 100% 76%, 0 100%, 0 0);
+    position: relative;
+    color: #fff;
+    animation: img_load_anim 2s;
+  }
+
+  .img_text {
+    top: 70%;
+    left: 2%;
+    width: 40rem;
+    position: absolute;
+    animation: in_anim 2s;
+  }
+}
+.main__projects__container__box--sub {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(19, 19, 19, 0.915);
+  padding: 2.5rem;
+  &--main {
+    color: #ddd;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    background-image: linear-gradient(
+      to bottom left,
+      rgba(255, 255, 255, 0.029) 100%,
+      rgba(0, 0, 0, 0.363) 100%
+    );
+    &--left {
+      width: 100%;
+      height: 100%;
+      background-color: #ddd;
+      //   clip-path: polygon(0 0, 100% 0, 53% 100%, 0 100%);
+      //   background-image: url();
+      background-size: cover;
+      display: flex;
+      padding: 2.5rem;
+      //   flex-direction: column;
+      align-items: end;
+
+      .text--on--image {
+        width: 50%;
+      }
+    }
+    &--right {
+      font-family: "Poppins", sans-serif;
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      left: 70%;
+      clip-path: polygon(43% 0, 100% 0, 100% 100%, 0 100%);
+      //   text-align: end;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: end;
+
+      background-image: linear-gradient(
+        to bottom left,
+        rgba(0, 0, 0, 0.393) 100%,
+        rgba(0, 0, 0, 0.363) 100%
+      );
+      .explore-btn {
+        margin-top: 2.5rem;
+        width: auto;
+        border: 2px solid #ddd;
+        padding: 0.5rem 2.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// animationm
+@keyframes in_anim {
+  0% {
+    opacity: 0;
+    transform: translate(-90px);
+  }
+  100% {
+    opacity: 1;
+    // transform: translate(-90px);
+  }
+}
+
+@keyframes img_load_anim {
+  0% {
+    filter: blur(2px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+@keyframes p_main_anim {
+}
