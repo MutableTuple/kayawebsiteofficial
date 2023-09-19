@@ -11,48 +11,57 @@ import Cards from "./card.component";
 
 const data = [
   {
+    id: crypto.randomUUID(),
     image: `url(${"https://atctirespvtltd30000sftvikhrolimumbai.s3.ap-south-1.amazonaws.com/ATC+Tires+Pvt+Ltd%2C+30000+SFT%2C+Vikhroli%2C+Mumbai+(38)/ATC+Tires+Pvt+Ltd%2C+30000+SFT%2C+Vikhroli%2C+Mumbai+(1).jpeg"})`,
     name: "Comprehensive Civil Interior Solutions",
     description:
       "We offer a comprehensive suite of interior solutions, including structural modifications and renovations.",
   },
   {
+    id: crypto.randomUUID(),
+
     image: "",
     name: "Versatile False Ceiling Installations",
     description:
       " Our expertise extends to the installation of a wide range of false ceiling designs, catering to various aesthetic and functional preferences.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Comprehensive Flooring Solutions",
     description:
       "We provide an extensive selection of flooring solutions, encompassing hardwood, laminate, tile, carpet, and vinyl installations.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Expert Carpets and Soft Furnishings",
     description:
       "We specialize in the supply and installation of carpets and soft furnishings, such as curtains, drapes, and upholstery.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Electrical and Lighting Services",
     description:
       "Our services encompass electrical and lighting installations, ensuring efficient and well-illuminated interior spaces.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Air Conditioning Solutions",
     description:
       "We excel in air conditioning installations, delivering optimal indoor climate control for your comfort.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Fire Alarm Systems",
     description:
       "We provide cutting-edge fire alarm systems, enhancing safety and compliance within your premises.",
   },
   {
+    id: crypto.randomUUID(),
     image: `url(${"https://atctirespvtltd30000sftvikhrolimumbai.s3.ap-south-1.amazonaws.com/ATC+Tires+Pvt+Ltd%2C+30000+SFT%2C+Vikhroli%2C+Mumbai+(38)/ATC+Tires+Pvt+Ltd%2C+30000+SFT%2C+Vikhroli%2C+Mumbai+(1).jpeg"})`,
 
     name: "Advanced Networking and Telecom Systems",
@@ -60,54 +69,63 @@ const data = [
       "Our proficiency extends to advanced networking and telecommunication infrastructure, ensuring seamless connectivity.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Communication Systems, Public Address, and High-Quality Audio",
     description:
       "We specialize in the installation of communication systems, public address solutions, and top-tier audio equipment for diverse applications.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Server Room Setup and Power Backup Solutions",
     description:
       "We offer expertise in designing and equipping server rooms, complete with uninterruptible power supplies (UPS) and backup diesel generators (DG).",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Designer Storage Solutions",
     description:
       "Our team crafts bespoke designer storage solutions, enhancing both aesthetics and functionality.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Precision Partitions and Wall Paneling",
     description:
       "We excel in the construction of precision partitions and the installation of sophisticated wall paneling, elevating the interior environment.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Customized Furniture and Carpentry Work",
     description:
       "We provide tailored solutions for both loose and fixed furniture, complemented by expert carpentry services.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Modular Fixtures and Furnishings",
     description:
       "Our offerings encompass the installation of modular fixtures and furnishings, optimizing space utilization.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Comprehensive Painting and Wall Finishing Services",
     description:
       "We provide a wide array of painting options and wall finishing techniques to achieve the desired look and feel.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "Kitchen Equipment and Miscellaneous Installations",
     description:
       "Our services include the installation of kitchen equipment and various miscellaneous items, ensuring a fully functional space.",
   },
   {
+    id: crypto.randomUUID(),
     image: "",
     name: "External and Internal Signage Solutions",
     description:
@@ -172,7 +190,12 @@ const Home = () => {
         </span>
         <div className="main__container-services--content media-content">
           {data.map((d) => (
-            <Cards image={d.image} name={d.name} description={d.description} />
+            <Cards
+              key={d.id}
+              image={d.image}
+              name={d.name}
+              description={d.description}
+            />
           ))}
         </div>
       </div>
@@ -251,7 +274,7 @@ const Home = () => {
       {/* footer */}
       <footer className="main__container-footer">
         <div className="vid-bg">
-          <video class="vid-bg__content" autoPlay muted loop>
+          <video className="vid-bg__content" autoPlay muted loop>
             <source src={require("./video.mp4")} type="video/mp4" />
             <source src={require("./video.mp4")} type="video/webm" />
             Your browser is not supported!

@@ -4,12 +4,9 @@ import "./aboutus.styles.scss";
 const AboutUs = () => {
   return (
     <div className="about_us__main__container">
-      <div className="about_us__main__container--box">
-        <h3 className="about_us__main__container--box--head">
-          {/* Crafting Connections, Inspiring Moments: Unveiling the Heart Behind
-          Kaya Infrastructure. */}
-        </h3>
-      </div>
+      {/* <div className="about_us__main__container--box">
+        <h3 className="about_us__main__container--box--head"></h3>
+      </div> */}
       <div className="about_us__main__container--box--head--sub">
         <h2 className="about_us__main__container--box--head--sub--head">
           The Story......

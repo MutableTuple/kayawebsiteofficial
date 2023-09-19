@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cards = ({ image, name, description }) => {
+const Cards = ({ image, name, description, ...props }) => {
   return (
     <div className="main__container-services--content con--items c-items--1">
       <div className="image--con image--1">{image}</div>
