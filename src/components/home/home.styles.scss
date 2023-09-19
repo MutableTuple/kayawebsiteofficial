@@ -1,6 +1,9 @@
 // * {
 //   border: 1px solid #000;
 // }
+// * {
+//   border: 1px solid #000;
+// }
 
 a:link,
 a:visited {
@@ -13,6 +16,8 @@ a:visited {
 
 .main__container {
   font-family: "Kanit" sans-serif;
+  width: 100%;
+  overflow-x: hidden;
   // position: relative;
   .loader {
     position: absolute;
@@ -28,7 +33,6 @@ a:visited {
     }
   }
 
-  width: 100%;
   &-landing {
     height: 100vh;
     width: auto;
@@ -47,9 +51,21 @@ a:visited {
         // border: 1px solid #fff;
         color: #fff;
         padding: 20px;
+        @media only screen and (max-width: 550px) {
+          width: 100%;
+        }
         &--heading {
           font-size: 4.5rem;
           text-transform: capitalize;
+          @media only screen and (max-width: 550px) {
+            width: 100%;
+            font-size: 3.5rem;
+          }
+
+          @media only screen and (max-width: 1200px) {
+            width: 100%;
+            font-size: 2.5rem;
+          }
         }
         .sub--main {
           font-size: 1rem;
@@ -64,6 +80,9 @@ a:visited {
       &--right {
         width: 50%;
         height: 100%;
+        @media only screen and (max-width: 550px) {
+          width: 0%;
+        }
       }
     }
 
@@ -84,20 +103,34 @@ a:visited {
       background-size: cover;
     }
   }
+
   &-about {
     margin-top: 2rem;
+    // height: auto;
+    width: 100%;
     height: 100vh;
     display: flex;
     background-color: #f1f1f1;
     font-family: "Kanit", sans-serif;
 
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      display: flex;
+      // position: relative;
+      color: #ddd;
+    }
+
     &--left {
       width: 60%;
       height: 100%;
+
       background-image: url("https://media.istockphoto.com/id/1178982949/photo/man-holding-blue-helmet-close-up.jpg?s=612x612&w=0&k=20&c=MyliIMUynBu6lsT8kh_9FvqBKoIUwWGg-iuoNippZPI=");
       background-size: cover;
       clip-path: polygon(0 0, 73% 0, 100% 100%, 0 100%, 0 100%, 0 100%, 0 42%);
       // -webkit-filter: grayscale(100%);
+      @media only screen and (max-width: 1000px) {
+        width: 0%;
+      }
     }
     &--right {
       width: 40%;
@@ -107,6 +140,17 @@ a:visited {
       font-weight: 700;
       font-size: 2.5rem;
       margin-left: 2rem;
+      @media only screen and (max-width: 1000px) {
+        padding: 0;
+        margin-right: 0;
+        font-weight: 700;
+        margin-left: 0;
+        padding: 2.5rem;
+        width: 100%;
+        background-color: #464646;
+        height: fit-content;
+        // padding: 2.5rem;
+      }
       .a {
         color: orangered;
       }
@@ -128,14 +172,30 @@ a:visited {
   }
   &-services {
     margin-top: 2rem;
+
     height: auto;
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
-    // background-color: #1d0000;
     padding: 2rem;
     color: #3c3c3c;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+
+    &--content {
+      height: 100%;
+    }
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
 
     // &--header {
     //   &:first-child {
@@ -147,10 +207,21 @@ a:visited {
     // & > * {
     //   transform: skewY(2deg);
     // }
-
+    .media-content {
+      overflow-x: scroll;
+      width: 90%;
+      height: 100%;
+      overflow-y: hidden;
+      padding: 1.5rem;
+      // @media only screen and (max-width: 1200px) {
+      //   max-width: 100%;
+      //   display: flex;
+      //   flex-direction: column;
+      // }
+    }
     .con--items {
       height: 25rem;
-      width: 50rem;
+      min-width: 20rem;
       text-align: center;
       background-color: #ffffff;
       box-shadow: 0rem 0.525rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -158,11 +229,20 @@ a:visited {
       display: flex;
       flex-direction: column;
       transition: 0.2s all;
+      &:first-child {
+        margin-left: -23%;
+      }
+      .media-content {
+        @media only screen and (max-width: 1200px) {
+          width: 50%;
+        }
+      }
 
       &:hover {
         box-shadow: 0rem 0.725rem 0.5rem rgba(0, 0, 0, 0.2);
       }
     }
+
     .con-items-text {
       font-size: 1rem;
       text-align: left;
@@ -221,11 +301,21 @@ a:visited {
       }
     }
   }
+  .know-more-btn-sub-div {
+    margin-top: 2.5rem;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
   &-why-us {
     margin-top: 4rem;
     max-width: 100%;
     height: 100vh;
-
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      background-color: #3c3c3c;
+    }
     // background-color: #ddd;
     // background-image: linear-gradient(
     //   to right bottom,
@@ -253,12 +343,16 @@ a:visited {
       background-size: 100%;
       transition: all 0.2s;
       font-family: "Kanit", sans-serif;
-
-      &:hover {
-        background-position: 10%;
-        // color: $;
-        transform: translateX(1rem);
+      @media only screen and (max-width: 1000px) {
+        width: 100%;
+        background-color: #3c3c3c;
+        color: #ddd;
       }
+      // &:hover {
+      //   background-position: 10%;
+      //   // color: $;
+      //   transform: translateX(1rem);
+      // }
       &--content {
         font-weight: 400;
         font-size: 1.25rem;
@@ -277,6 +371,10 @@ a:visited {
       background-image: url("https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
       background-size: cover;
       // margin-right: 2rem;
+      @media only screen and (max-width: 1000px) {
+        width: 0%;
+        background-color: #3c3c3c;
+      }
       clip-path: polygon(
         100% 0,
         100% 7%,
@@ -294,14 +392,59 @@ a:visited {
   &-clients {
     width: 100%;
     height: 100vh;
-    background-color: #ddd;
+    background-color: #c6c6c6;
     margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 800px) {
+      height: 80vh;
+    }
+    @media only screen and (max-width: 600px) {
+      height: 45vh;
+    }
+    @media only screen and (max-width: 400px) {
+      height: 40vh;
+    }
+    .oc {
+      height: 100%;
+      width: 20%;
+      background: #767676;
+      color: #fff;
+      font-size: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media only screen and (max-width: 1100px) {
+        display: none;
+      }
+    }
+    .clients__elem {
+      height: 100%;
+      width: 100%;
+
+      // object-fit: contain;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("");
+      transform: scale(0.9);
+      @media only screen and (max-width: 400px) {
+        transform: scale(1);
+      }
+      .c_img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
   }
 
   &-current-project {
     width: 100%;
     min-height: 100vh;
     // background-color: #ddd;
+    background-color: #3c3c3c;
+
     margin-top: 4rem;
     margin-bottom: 4rem;
     &--projects-con {
@@ -309,6 +452,11 @@ a:visited {
         border-bottom: 2px solid white;
       }
     }
+    @media only screen and (max-width: 550px) {
+      height: fit-content;
+      color: #ddd;
+    }
+
     .grid-con-pro {
       display: grid;
       grid-template-columns: 75% 25%;
@@ -318,7 +466,16 @@ a:visited {
       row-gap: 0.5rem;
       // padding: 0 0.5rem;
       color: #fff;
-      background-color: #0f0000;
+      @media only screen and (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-image: url("https://4kwallpapers.com/images/wallpapers/skyscrapers-airplane-high-rise-building-metropolis-5k-4480x2520-5850.jpg");
+        background-size: cover;
+      }
     }
     .p--1 {
       width: 100%;
@@ -327,7 +484,13 @@ a:visited {
       grid-column: 1;
       clip-path: polygon(0 0, 100% 0, 81% 100%, 0 100%, 0 100%, 0 100%, 0 42%);
       transition: all 0.2s;
-
+      background-image: url("https://4kwallpapers.com/images/wallpapers/skyscrapers-airplane-high-rise-building-metropolis-5k-4480x2520-5850.jpg");
+      background-size: cover;
+      border: 1px solid #ffffff;
+      @media only screen and (max-width: 550px) {
+        background-image: none;
+        width: 0%;
+      }
       // background-image: url("https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
       &:hover {
         transform: translateX(3rem);
@@ -393,6 +556,55 @@ a:visited {
       align-items: center;
     }
   }
+  .footer-small-screen {
+    display: none;
+
+    .enclosure {
+      width: 100%;
+      display: flex;
+      padding: 1.5rem;
+      justify-content: space-between;
+
+      .list--item--nav-sm {
+        list-style: none;
+        & > * {
+          padding-left: 1rem;
+        }
+      }
+    }
+    // justify-content: space-around;
+    .logoimage-sm-right {
+      width: 50%;
+      height: 100%;
+      padding-left: 2.5rem;
+    }
+    .logoimage-sm {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo-sm {
+      width: 4.5rem;
+      height: 4.5rem;
+      .sm-head--footer {
+        font-size: 0.5rem;
+      }
+    }
+    @media only screen and (max-width: 800px) {
+      background-color: #464646;
+      padding: 2.5rem;
+      display: grid;
+      width: 100%;
+      color: #ddd;
+
+      display: block;
+      // width: 100%;
+      // display: flex;
+      // flex-direction: column;
+    }
+  }
   &-footer {
     margin-top: 2rem;
     background-color: rgb(0, 0, 0, 0.6);
@@ -406,6 +618,12 @@ a:visited {
     // background-image: url("./landing-cover.jpg");
     background-size: cover;
     overflow: hidden;
+    @media only screen and (max-width: 800px) {
+      display: none;
+      // width: 100%;
+      // display: flex;
+      // flex-direction: column;
+    }
 
     .vid-bg {
       // display: block;
@@ -430,6 +648,11 @@ a:visited {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      @media only screen and (max-width: 1000px) {
+        // width: 100%;
+        // display: flex;
+        // flex-direction: column;
+      }
     }
     .item-ft {
       &:not(:last-child) {

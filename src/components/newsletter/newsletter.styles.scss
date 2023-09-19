@@ -1,30 +1,74 @@
 .main__projects__container {
   height: auto;
-  width: 100%;
+  max-width: 100%;
 
+  @media only screen and (max-width: 850px) {
+    width: 100%;
+  }
+
+  .projects--type {
+    width: 100%;
+    padding: 2.5rem;
+    background-color: #272727;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    @media only screen and (max-width: 850px) {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .main--elem {
+      padding: 0.75rem 2.75rem;
+      // border: 2px solid #fff;
+      margin-left: 2.5rem;
+      transition: 0.25s all ease-in;
+      cursor: pointer;
+      // @media only screen and (max-width: 830px) {
+      //   width: 100%;
+      //   flex-direction: column;
+      // }
+      &:hover {
+        background-color: #fff;
+        color: #272727;
+      }
+    }
+    .item-active {
+      background-color: #fff;
+      color: #272727;
+    }
+  }
   &__box {
     width: 100%;
     height: 95vh;
-    filter: grayscale(100%);
+
+    // filter: grayscale(100%);
 
     background-image: linear-gradient(
         to bottom left,
         rgba(255, 255, 255, 0.029) 65%,
         rgba(0, 0, 0, 0.363) 50%
       ),
-      url("https://www.pixelstalk.net/wp-content/uploads/images6/New-York-Wallpaper-4K-HD-Free-download.jpg");
+      url("https://dl.dropboxusercontent.com/scl/fi/tl2bsyta0vfbxd4j515qg/ERGO-Technology-Services-40000-SFT-Hiranandani-Powai-Powai-Mumbai-115.jpeg?rlkey=py7ueiodmacrs339b6tuv0sqw&dl=0");
+    // url("https:///scl/fi/05vb8ar8traela99ni5sw/ERGO-Technology-Services-40000-SFT-Hiranandani-Powai-Powai-Mumbai-108.jpeg?rlkey=w0c56106wt4ckw5wlbt7am3an&dl=0");
+
     // background-position: 80% 20%;
     background-size: cover;
     // clip-path: polygon(100% 0, 100% 76%, 0 100%, 0 0);
     position: relative;
     color: #fff;
     animation: img_load_anim 2s;
+    transition: 1.5s;
+    &:hover {
+      background-position: 100% 100%;
+    }
   }
 
   .img_text {
     top: 70%;
     left: 2%;
-    width: 40rem;
+    width: 40%;
     position: absolute;
     animation: in_anim 2s;
   }
@@ -34,18 +78,25 @@
   width: 100%;
   background-color: rgba(19, 19, 19, 0.915);
   padding: 2.5rem;
+
   &--main {
     color: #ddd;
     height: 100%;
     width: 100%;
     display: flex;
     position: relative;
+    // @media only screen and (max-width: 1060px) {
+    //   display: flex;
+    //   flex-direction: column;
+    //   background-color: #da0a0a;
+    // }
 
     background-image: linear-gradient(
       to bottom left,
       rgba(255, 255, 255, 0.029) 100%,
       rgba(0, 0, 0, 0.363) 100%
     );
+
     &--left {
       width: 100%;
       height: 100%;
@@ -57,6 +108,10 @@
       padding: 2.5rem;
       //   flex-direction: column;
       align-items: end;
+      // @media only screen and (max-width: 1060px) {
+      //   width: 50%;
+      //   clip-path: none;
+      // }
 
       .text--on--image {
         width: 50%;
@@ -81,6 +136,11 @@
         rgba(0, 0, 0, 0.393) 100%,
         rgba(0, 0, 0, 0.363) 100%
       );
+      @media only screen and (max-width: 1060px) {
+        left: 50%;
+        width: 50%;
+        clip-path: none;
+      }
       .explore-btn {
         margin-top: 2.5rem;
         width: auto;

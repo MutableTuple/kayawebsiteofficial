@@ -1,0 +1,58 @@
+.contact__main__container {
+  background-color: #000000cc;
+  color: #ddd;
+  .contact--us-banner {
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.553) 100%,
+        rgba(24, 214, 103, 0.4) 20%
+      ),
+      url("https://free4kwallpapers.com/uploads/originals/2022/03/27/new-york-sunset-dark-clouds-buildings-cityscape-wallpaper.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contact__main__container--head {
+      font-size: 5rem;
+    }
+  }
+  width: 100%;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &--box {
+    width: 80%;
+    min-height: 80vh;
+    display: flex;
+    padding: 2.5rem;
+    &--left {
+      width: 50%;
+      border: 1px solid #000;
+
+      margin-right: 2.5rem;
+      padding: 2rem;
+      &--office-add {
+        margin-bottom: 2.5rem;
+      }
+      &--factory-add {
+        margin-bottom: 2.5rem;
+      }
+      .email-add,
+      .phone-num,
+      .whatsapp {
+        margin-bottom: 2.5rem;
+      }
+    }
+    &--right {
+      width: 50%;
+      border: 1px solid #000;
+    }
+  }
+}

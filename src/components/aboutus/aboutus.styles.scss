@@ -13,13 +13,20 @@
     &--div--in {
       display: flex;
       width: 100%;
-      height: 100vh;
+      height: auto;
       justify-content: center;
       padding: 2rem 0;
+      @media only screen and (max-width: 1200px) {
+        display: flex;
+        position: relative;
+      }
       &--left {
-        width: 50%;
+        width: 0%;
         height: 100%;
-
+        @media only screen and (max-width: 1200px) {
+          width: 100%;
+          position: absolute;
+        }
         .story--p-1 {
           padding: 2rem;
           font-weight: 500;
@@ -34,9 +41,33 @@
         }
       }
       &--right {
-        width: 50%;
-        height: 100%;
+        width: 100%;
+        height: 75vh;
         padding: 1.5rem;
+        font-size: 2rem;
+        color: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(
+            to bottom left,
+            rgba(0, 0, 0, 0.382) 85%,
+            rgba(0, 0, 0, 0.363) 50%
+          ),
+          url("https://archello.com/thumbs/images/2022/07/12/sanjay-puri-architects-mirai-house-of-arches-private-houses-archello.1657611024.4722.jpg?fit=crop&auto=compress");
+        background-size: cover;
+        @media only screen and (max-width: 1200px) {
+          width: 100%;
+        }
+        @media only screen and (max-width: 1200px) {
+          font-size: 1.5rem;
+        }
+        @media only screen and (max-width: 690px) {
+          font-size: 1.25rem;
+        }
+        @media only screen and (max-width: 690px) {
+          font-size: 1rem;
+        }
         .s-img-1 {
           width: 100%;
           height: 100%;
@@ -71,6 +102,8 @@
   );
   &--values {
     margin-top: 4.5rem;
+    // padding: 2.5rem;
+
     &--head {
       margin-left: 2.5rem;
     }
@@ -100,6 +133,16 @@
           justify-content: center;
           padding: 0.5rem;
           color: #fff;
+          @media only screen and (max-width: 980px) {
+            font-size: 0.8rem;
+          }
+          @media only screen and (max-width: 500px) {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.61);
+            text-align: center;
+            height: auto;
+            padding: 1.5rem;
+          }
           .ov {
             font-size: 2.5rem;
           }
@@ -111,6 +154,11 @@
           // clip-path: polygon(100% 0, 100% 100%, 28% 100%, 0 0);
           background-image: url("https://images.pexels.com/photos/7688159/pexels-photo-7688159.jpeg?auto=compress&cs=tinysgb&w=1260&h=750&dpr=1");
           background-size: cover;
+          @media only screen and (max-width: 500px) {
+            width: 0%;
+            background-color: #000000b2;
+            text-align: center;
+          }
         }
       }
     }
@@ -138,6 +186,18 @@
           color: #fff;
           order: 2;
           margin-left: 2.5rem;
+          @media only screen and (max-width: 980px) {
+            font-size: 0.8rem;
+          }
+          @media only screen and (max-width: 500px) {
+            margin-left: 0;
+            background-color: #000000b2;
+
+            width: 100%;
+            text-align: center;
+            height: auto;
+            padding: 1.5rem;
+          }
           .ov {
             font-size: 2.5rem;
           }
@@ -149,11 +209,13 @@
           // clip-path: polygon(94% 0, 66% 100%, 0 100%, 0 0);
           background-image: url("https://images.pexels.com/photos/1181360/pexels-photo-1181360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
           background-size: cover;
+          @media only screen and (max-width: 500px) {
+            width: 0%;
+          }
         }
       }
     }
-    .vision {
-    }
+
     .comp__val {
       margin-top: 2rem;
       width: 100%;
@@ -170,6 +232,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @media only screen and (max-width: 500px) {
+        font-size: 1rem;
+      }
     }
   }
   transform: skewY(-2deg);

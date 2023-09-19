@@ -1,9 +1,10 @@
 .main__gallery__container {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   padding: 2rem;
   font-family: "Quicksand", sans-serif;
   background-color: #272829;
+
   .gall-item--span {
     background-color: rgba(255, 255, 255, 0.233);
     padding: 0.5rem;
@@ -21,11 +22,56 @@
   }
   &-box {
     min-height: auto;
-    width: 100%;
-    position: relative;
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-row: 75% 25%;
+    grid-template-columns: repeat(4, 25%);
+
+    @media only screen and (max-width: 1360px) {
+      width: 100%;
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      & > * {
+      }
+    }
+    @media only screen and (max-width: 1150px) {
+      max-width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      // padding: 2.5rem;
+      & > * {
+        width: 100%;
+        display: grid;
+        align-self: center;
+        justify-self: center;
+        margin: 0;
+      }
+    }
+    @media only screen and (max-width: 900px) {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0rem;
+      justify-content: center;
+      & > * {
+        max-width: 100%;
+      }
+    }
+    // @media only screen and (max-width: 880px) {
+    //   max-width: 100%;
+    //   grid-template-columns: repeat(2, 1fr);
+    //   grid-template-rows: repeat(2, 1fr);
+    //   margin: 0;
+    //   justify-content: center;
+    //   & > * {
+    //     width: 100%;
+    //     display: grid;
+    //     align-self: center;
+    //     justify-self: center;
+    //   }
+    // }
+
     & > * {
       margin: 1.5rem;
     }
@@ -37,6 +83,7 @@
       max-width: 100%;
       height: 40rem;
       background-color: #ac15cb;
+      // background-image: url("https://atctirespvtltd30000sftvikhrolimumbai.s3.ap-south-1.amazonaws.com/ATC+Tires+Pvt+Ltd%2C+30000+SFT%2C+Vikhroli%2C+Mumbai+(38)/ATC+Tires+Pvt+Ltd%2C+30000+SFT%2C+Vikhroli%2C+Mumbai+(1).jpeg");
       grid-column: 1/-1;
       grid-row: 1/3;
       //   background-image: url("");
@@ -48,45 +95,19 @@
         background-position: 100% 100%;
       }
     }
-    &--item-2 {
+    &--item {
       width: 20rem;
       height: 15rem;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: end;
-      background-image: url("https://www.lifestylehousing.in/blogs/wp-content/uploads/2022/06/shutterstock_785823109-scaled.jpg");
+      // background-image: url("https://www.lifestylehousing.in/blogs/wp-content/uploads/2022/06/shutterstock_785823109-scaled.jpg");
       background-size: cover;
-    }
-    &--item-3 {
-      width: 20rem;
-      height: 15rem;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      background-image: url("https://global-uploads.webflow.com/5f58a077d654db1a689fd95b/60bded6625df977a74bc6c29_picfair-04756271-aerial-view-of-dramatic-sunset-at-melbourne-city-skyline-fu-PREVIEW-ONLY.jpg");
-      background-size: cover;
-    }
-    &--item-4 {
-      width: 20rem;
-      height: 15rem;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      background-image: url("https://www.lifestylehousing.in/blogs/wp-content/uploads/2022/06/shutterstock_785823109-scaled.jpg");
-      background-size: cover;
-    }
-    &--item-5 {
-      width: 20rem;
-      height: 15rem;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      background-image: url("https://www.lifestylehousing.in/blogs/wp-content/uploads/2022/06/shutterstock_785823109-scaled.jpg");
-      background-size: cover;
+      background-position: 100%;
+      &:hover {
+        background-position: 0%;
+      }
     }
 
     .main__gallery__container-box--cover {

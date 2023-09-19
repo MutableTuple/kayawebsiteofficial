@@ -15,7 +15,7 @@ const AboutUs = () => {
           The Story......
         </h2>
         <div className="about_us__main__container--box--head--sub--div--in">
-          <div className="about_us__main__container--box--head--sub--div--in--left">
+          {/* <div className="about_us__main__container--box--head--sub--div--in--left">
             <p className="story--p-1">
               Amidst Mumbai's vibrant rhythm, we're an interior decoration firm
               turning spaces into living dreams. From homes to hotels, boutiques
@@ -28,17 +28,25 @@ const AboutUs = () => {
               tapestry, we're the threads of creativity, binding dreams to
               reality and redefining the essence of design.
             </p>
-          </div>
+          </div> */}
           <div className="about_us__main__container--box--head--sub--div--in--right">
-            <img
-              src="https://archello.com/thumbs/images/2022/07/12/sanjay-puri-architects-mirai-house-of-arches-private-houses-archello.1657611024.4722.jpg?fit=crop&auto=compress"
-              alt=""
-              className="s-img-1"
-            />
+            <p className="story--p-1">
+              Amidst Mumbai's vibrant rhythm, we're an interior decoration firm
+              turning spaces into living dreams. From homes to hotels, boutiques
+              to offices, our artistry blends seamlessly with innovative
+              technology, creating not just spaces, but experiences. With
+              projects spanning India, we're more than designers; we're
+              storytellers, weaving aspirations into every design stroke. As we
+              collaborate, we become part of narratives, crafting relationships
+              and leaving smiles of satisfaction in our wake. In Mumbai's
+              tapestry, we're the threads of creativity, binding dreams to
+              reality and redefining the essence of design.
+            </p>
+            {/* <img src="" alt="" className="s-img-1" /> */}
           </div>
         </div>
       </div>
-      <div className="main__sub__container">
+      {/* <div className="main__sub__container">
         <h1 className="main__sub__container--head">The Team...</h1>
         <div className="main__sub__container--box">
           <div className="main__sub__container--box--team-leaders">
@@ -104,7 +112,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="main__sub__container--values">
         <h1 className="main__sub__container--values--head">Our Values...</h1>
         <div className="main__sub__container--values--vision--1">
